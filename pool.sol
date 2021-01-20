@@ -87,6 +87,7 @@ contract pool {
     /*====================================Admin================================*/
     
     function setAddress(address _unifactory, address _unirouter, address _stakingAddress, address _pBTC35aAddress, address _wBTCAddress) public returns(bool){
+        require(msg.sender == dev);
         Unifactory = _unifactory;
         Unirouter = _unirouter;
         stakingAddress = _stakingAddress;
